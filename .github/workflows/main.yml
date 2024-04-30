@@ -29,6 +29,13 @@ jobs:
         shell: bash
         run: |
           echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+          
+      - name: Export ENV
+        id: export-env
+        shell: bash
+        run: |
+          export COREPACK_ENABLE_STRICT=0
+
 
       - uses: actions/cache@v4.0.2
         name: Setup pnpm cache
