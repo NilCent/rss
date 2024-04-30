@@ -16,12 +16,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-
-      - name: Export ENV
-        id: export-env
-        shell: bash
-        run: |
-          export COREPACK_ENABLE_STRICT=0
           
       - uses: pnpm/action-setup@v3
         name: Install pnpm
